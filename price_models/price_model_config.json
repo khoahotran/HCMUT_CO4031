@@ -1,0 +1,125 @@
+{
+  "version": "1.0",
+  "model_type": "price_only_classification",
+  "features": [
+    "discounted_price",
+    "actual_price",
+    "discount_percentage",
+    "price_ratio",
+    "price_diff",
+    "discount_amount",
+    "is_heavy_discount",
+    "is_light_discount",
+    "price_volatility",
+    "price_category",
+    "discount_category",
+    "value_score"
+  ],
+  "target_labels": {
+    "0": {
+      "name": "Average",
+      "range": "3.0-3.9",
+      "color": "#FFA726"
+    },
+    "1": {
+      "name": "Good",
+      "range": "4.0-4.4",
+      "color": "#42A5F5"
+    },
+    "2": {
+      "name": "Excellent",
+      "range": "4.5-5.0",
+      "color": "#66BB6A"
+    }
+  },
+  "models": {
+    "random_forest": {
+      "accuracy": 0.5639,
+      "cv_score": 0.7254,
+      "parameters": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "n_estimators": 100
+      },
+      "file": "rf_price_model.pkl"
+    },
+    "xgboost": {
+      "accuracy": 0.6073,
+      "cv_score": 0.7438,
+      "parameters": {
+        "colsample_bytree": 1.0,
+        "gamma": 0,
+        "learning_rate": 0.2,
+        "max_depth": 6,
+        "n_estimators": 200,
+        "subsample": 0.8
+      },
+      "file": "xgb_price_model.pkl"
+    },
+    "knn": {
+      "accuracy": 0.5936,
+      "cv_score": 0.6946,
+      "parameters": {
+        "metric": "manhattan",
+        "n_neighbors": 3,
+        "weights": "distance"
+      },
+      "file": "knn_price_model.pkl",
+      "requires_scaling": true
+    }
+  },
+  "best_model": {
+    "name": "xgboost",
+    "display_name": "XGBoost",
+    "accuracy": 0.6073,
+    "file": "best_price_model.pkl"
+  },
+  "data_statistics": {
+    "original": {
+      "rows": 1465,
+      "cols": 16
+    },
+    "processed": {
+      "rows": 1458,
+      "cols": 14
+    },
+    "training": {
+      "samples": 2112,
+      "features": 12
+    },
+    "test": {
+      "samples": 438,
+      "features": 12
+    },
+    "class_distribution": {
+      "0": 348,
+      "1": 1006,
+      "2": 104
+    }
+  },
+  "training_parameters": {
+    "random_state": 42,
+    "test_size": 0.3,
+    "cv_folds": 5,
+    "smote": true,
+    "scaling": true
+  },
+  "feature_descriptions": {
+    "discounted_price": "Giá sau khi giảm (đơn vị: tiền tệ gốc)",
+    "actual_price": "Giá gốc (đơn vị: tiền tệ gốc)",
+    "discount_percentage": "Phần trăm giảm giá (%)",
+    "price_ratio": "Tỷ lệ giá (discounted/actual)",
+    "price_diff": "Chênh lệch giá (actual - discounted)",
+    "discount_amount": "Số tiền giảm (bằng price_diff)",
+    "is_heavy_discount": "Có giảm giá nhiều không (>50%)",
+    "is_light_discount": "Có giảm giá ít không (<10%)",
+    "price_volatility": "Độ biến động giá (price_diff/actual_price)",
+    "price_category": "Phân loại nhóm giá (0-5)",
+    "discount_category": "Phân loại nhóm giảm giá (0-4)",
+    "value_score": "Điểm giá trị (price_ratio*100/(actual_price+1))"
+  },
+  "created_at": "2025-12-05T17:33:18.566744",
+  "author": "Amazon Rating Prediction System"
+}

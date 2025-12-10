@@ -1,0 +1,43 @@
+
+MODEL TRAINING REPORT
+=====================
+Date: 2025-12-05 16:15:06.532033
+
+DATA SUMMARY
+------------
+- Original samples: 1465
+- Processed samples: 1464
+- Features used: 9
+- Target classes: 3
+- Class distribution: {0: np.int64(354), 1: np.int64(104), 2: np.int64(1006)}
+
+MODEL PERFORMANCE
+-----------------
+        Model  Accuracy  Best CV Score                                                                                                           Parameters
+Random Forest  0.906818       0.955570        {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+      XGBoost  0.959091       0.975257 {'colsample_bytree': 1.0, 'gamma': 0.2, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 200, 'subsample': 0.8}
+          KNN  0.804545       0.891556                                                     {'metric': 'euclidean', 'n_neighbors': 3, 'weights': 'distance'}
+
+BEST MODEL
+----------
+- Model: XGBoost
+- Accuracy: 0.9591
+- File: best_model.pkl
+
+PCA ANALYSIS
+------------
+- Total variance explained (2 components): 76.33%
+- Components for 90% variance: 3
+- Components for 95% variance: 3
+
+FILES SAVED
+-----------
+1. amazon_processed.csv - Processed data
+2. random_forest_model.pkl - Random Forest model
+3. xgboost_model.pkl - XGBoost model
+4. knn_model.pkl - KNN model
+5. best_model.pkl - Best performing model
+6. scaler.pkl - StandardScaler object
+7. model_comparison.csv - Model comparison results
+8. model_predictions.csv - Prediction results
+9. processing_metadata.json - Processing metadata

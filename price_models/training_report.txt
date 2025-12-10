@@ -1,0 +1,52 @@
+
+PRICE-ONLY RATING PREDICTION MODEL TRAINING REPORT
+==================================================
+Date: 2025-12-05 17:33:26.270522
+
+SUMMARY
+-------
+• Models trained: Random Forest, XGBoost, KNN
+• Features used: 12 price-only features
+• Best model: XGBoost (Accuracy: 0.6073)
+• Total training time: Completed successfully
+
+DATA INFORMATION
+----------------
+• Original dataset: 1465 samples, 16 features
+• Processed dataset: 1458 samples
+• Training set: 2112 samples (after SMOTE)
+• Test set: 438 samples
+
+MODEL PERFORMANCE
+-----------------
+        Model  Accuracy  CV Score                                                                                                         Parameters
+Random Forest  0.563927  0.725368    {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+      XGBoost  0.607306  0.743836 {'colsample_bytree': 1.0, 'gamma': 0, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 200, 'subsample': 0.8}
+          KNN  0.593607  0.694599                                                   {'metric': 'manhattan', 'n_neighbors': 3, 'weights': 'distance'}
+
+FEATURES USED
+-------------
+ 1. discounted_price
+ 2. actual_price
+ 3. discount_percentage
+ 4. price_ratio
+ 5. price_diff
+ 6. discount_amount
+ 7. is_heavy_discount
+ 8. is_light_discount
+ 9. price_volatility
+10. price_category
+11. discount_category
+12. value_score
+
+FILES SAVED
+-----------
+1. rf_price_model.pkl      - Random Forest model
+2. xgb_price_model.pkl     - XGBoost model
+3. knn_price_model.pkl     - KNN model
+4. scaler_price.pkl        - StandardScaler
+5. best_price_model.pkl    - Best performing model
+6. price_model_config.json - Model configuration
+7. price_model_comparison.csv - Performance comparison
+8. amazon_price_features.csv - Processed data with features
+9. price_predictor.py      - Prediction helper script

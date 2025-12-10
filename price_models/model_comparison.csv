@@ -1,0 +1,4 @@
+Model,Accuracy,CV Score,Parameters
+Random Forest,0.5639269406392694,0.7253683349579285,"{'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}"
+XGBoost,0.6073059360730594,0.7438360615329457,"{'colsample_bytree': 1.0, 'gamma': 0, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 200, 'subsample': 0.8}"
+KNN,0.593607305936073,0.6945985008907264,"{'metric': 'manhattan', 'n_neighbors': 3, 'weights': 'distance'}"

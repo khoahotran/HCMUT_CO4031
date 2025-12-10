@@ -1,0 +1,76 @@
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# IDE junk
+.vscode/
+.idea/
+*.swp
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Jupyter / experiments
+.ipynb_checkpoints/
+*.ipynb_save
+*.ipynb_convert
+
+# Logs & caches
+*.log
+logs/
+.cache/
+huggingface/
+datasets/
+wandb/
+mlruns/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# OS trash
+Thumbs.db
+.DS_Store
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.pb
+*.onnx
+*.h5
+*.tflite
+
+# Training artifacts
+checkpoints/
+outputs/
+runs/
+saved_models/
+
+# Data
+data/
+datasets/
+*.parquet
+*.npz
+*.npy
+
+# Streamlit
+.streamlit/
+
+# Env & config secrets
+.env.local
+.env.production
+.env.dev

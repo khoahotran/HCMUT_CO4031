@@ -1,0 +1,86 @@
+{
+  "discounted_price": {
+    "min": 39.0,
+    "max": 77990.0,
+    "mean": 3136.7445,
+    "median": 799.0,
+    "std": 6958.8482
+  },
+  "actual_price": {
+    "min": 39.0,
+    "max": 139900.0,
+    "mean": 5463.1147,
+    "median": 1650.0,
+    "std": 10897.6181
+  },
+  "discount_percentage": {
+    "min": 0.0,
+    "max": 94.0,
+    "mean": 47.6461,
+    "median": 50.0,
+    "std": 21.6247
+  },
+  "price_ratio": {
+    "min": 0.0588,
+    "max": 1.0,
+    "mean": 0.5236,
+    "median": 0.4998,
+    "std": 0.2163
+  },
+  "price_diff": {
+    "min": 0.0,
+    "max": 61910.0,
+    "mean": 2326.3703,
+    "median": 800.0,
+    "std": 4614.3283
+  },
+  "discount_amount": {
+    "min": 0.0,
+    "max": 61910.0,
+    "mean": 2326.3703,
+    "median": 800.0,
+    "std": 4614.3283
+  },
+  "is_heavy_discount": {
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.4739,
+    "median": 0.0,
+    "std": 0.4995
+  },
+  "is_light_discount": {
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.0508,
+    "median": 0.0,
+    "std": 0.2196
+  },
+  "price_volatility": {
+    "min": 0.0,
+    "max": 0.9412,
+    "mean": 0.4764,
+    "median": 0.5002,
+    "std": 0.2163
+  },
+  "price_category": {
+    "min": 0.0,
+    "max": 5.0,
+    "mean": 4.4417,
+    "median": 5.0,
+    "std": 0.8536
+  },
+  "discount_category": {
+    "min": 0.0,
+    "max": 4.0,
+    "mean": 3.0583,
+    "median": 3.0,
+    "std": 1.1675
+  },
+  "value_score": {
+    "min": 0.0004,
+    "max": 2.5,
+    "mean": 0.063,
+    "median": 0.0266,
+    "std": 0.1602
+  }
+}
