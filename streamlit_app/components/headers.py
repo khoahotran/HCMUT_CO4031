@@ -62,7 +62,6 @@ def render_metric_card(title, value, delta=None, help_text=None):
         <h3>{title}</h3>
         <div class="value">{value}</div>
         {delta_html}
-        {f'<p style="margin-top: 0.5rem; font-size: 0.875rem; color: #9CA3AF;">{help_text}</p>' if help_text else ''}
     </div>
     """, unsafe_allow_html=True)
 
